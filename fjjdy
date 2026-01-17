@@ -1,0 +1,114 @@
+local Main_Lua = game:HttpGet("https://github.com/Footagesus/WindUI/releases/latest/download/main.lua")
+local Loaded_Main_Lua = loadstring(Main_Lua)()
+local Window = Loaded_Main_Lua:CreateWindow({
+    User = {
+        Enabled = true,
+        Callback = function()
+            print("clicked")
+        end,
+        Anonymous = false,
+    },
+    Author = "本脚本为缝合",
+    IconThemed = true,
+    ScrollBarEnabled = true,
+    Folder = "缝合",
+    HideSearchBar = false,
+    Title = "月薪脚本",
+    Transparent = true,
+    SideBarWidth = 200,
+    Theme = "Light",
+    Icon = "monitor",
+    Size = UDim2.fromOffset(300, 270),
+})
+
+
+Window:EditOpenButton({
+    StrokeThickness = 4,
+    Title = "月薪脚本", 
+    Color = ColorSequence.new(Color3.fromHex("#ffffff"), Color3.fromHex("#000000")), --颜色渐变
+    Draggable = true, --是否可拖动 是
+    Icon = "monitor", --悬浮球图标
+    CornerRadius = UDim.new(1, 0), --圆角
+})
+
+ Window:Tag({
+    Title = "v1.0.0", --副标题
+    Color = Color3.fromHex("#468C37"), --副标题颜色
+})
+Window:Tag({
+    Title = "qq1076643480", --副标题
+    Color = Color3.fromHex("#FF5809"), --副标题颜色
+})
+Window:Tag({
+    Title = "纯缝合", --副标题
+    Color = Color3.fromHex("#ABB78C"), --副标题颜色
+})
+local homeTab = Window:Tab({ --创建选择栏
+    Title = "通知", --文本
+    Icon = "home", --图标
+})
+homeTab:Paragraph({ --文字/图片栏
+    Image = "rbxassetid://133744850199019", --创建图标
+    Title = "月薪脚本", --副标题
+    ImageSize = 68, --图片大小
+    Desc = "史上缝合最多的脚本", --文本
+Buttons = {{ --按钮
+    Callback =  --触发
+    function()
+    setclipboard("1076643480")
+     
+    end, --结尾
+   Title = "请加QQ群1076643480", --按钮文本
+}}    
+})
+
+local homeTab = Window:Tab({ --创建选择栏
+    Title = "通用", --文本
+    Icon = "geist:window", --图标
+})
+
+homeTab:Button({ --按钮
+    Callback =  --触发
+    function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/XNEOFF/FlyGuiV3/main/FlyGuiV3.txt"))()
+    
+    end, --结尾
+    Title = "飞行", --按钮文本
+})
+homeTab:Button({ --按钮
+    Callback =  --触发
+    function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/infyiff/backup/main/dex.lua"))()
+          end,
+          Title = "iydex修复版"
+})
+local homeTab = Window:Tab({ --创建选择栏
+    Title = "doors", --文本
+    Icon = "geist:window", --图标
+})
+
+homeTab:Button({ --按钮
+    Callback =  --触发
+    function()
+    UIStyle = "Obsidian" --或者LinoriaLib
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/XxxStellatexxX/Starring-Doors/refs/heads/main/Script')))()
+    
+    end, --结尾
+    Title = "最好用的刷旋钮", --按钮文本
+})
+homeTab:Button({ --按钮
+    Callback =  --触发
+    function()
+    loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/002c19202c9946e6047b0c6e0ad51f84.lua"))()
+    end,
+    Title = "msp要解卡"
+})
+homeTab:Button({ --按钮
+    Callback =  --触发
+    function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/XxxStellatexxX/Sapphire-is-the-best/refs/heads/main/Script'))()
+    end,
+    Title = "Sapphire"
+})
+
+Loaded_Main_Lua:SetTheme("Dark")

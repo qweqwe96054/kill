@@ -82,6 +82,20 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/infyiff/backup/main/d
           end,
           Title = "iydex修复版"
 })
+homeTab:Button({ --按钮
+    Callback =  --触发
+    function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/V5PQy3y0", true))()
+         end,
+         Title = "无限跳"
+})
+homeTab:Button({ --按钮
+    Callback =  --触发
+    function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Matthew201322/Doors-Scriptee/refs/heads/main/Shakelight.lua"))()
+    end,
+    Title = "引导之光手电筒"
+})
 local homeTab = Window:Tab({ --创建选择栏
     Title = "doors", --文本
     Icon = "geist:window", --图标

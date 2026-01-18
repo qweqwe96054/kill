@@ -24,7 +24,7 @@ local Window = Loaded_Main_Lua:CreateWindow({
       Title = "你已进入月薪脚本卡密系统",
        Note = "请加QQ群获得卡密",
         KeyValidator = function(EnteredKey) -- 密钥验证函数
-         if EnteredKey == "不是，哥们，你真相信了呀" then -- 输入密钥等于1234时
+         if EnteredKey == "8048" then -- 输入密钥等于1234时
               
               return true -- 验证通过
           end
@@ -168,7 +168,7 @@ homeTab:Button({ --按钮
     Title = "ls_中心"
 })
 local homeTab = Window:Tab({ --创建选择栏
-    Title = "通用", --文本
+    Title = "等到未来更新!", --文本
     Icon = "rbxassetid://78974218545947",
 })
 

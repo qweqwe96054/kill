@@ -34,7 +34,7 @@ local Window = Loaded_Main_Lua:CreateWindow({
     }
 })
 
-
+Window:SetBackgroundImageTransparency(0.3)
 Window:EditOpenButton({
     StrokeThickness = 4,
     Title = "月薪脚本", 
@@ -45,7 +45,7 @@ Window:EditOpenButton({
 })
 
  Window:Tag({
-    Title = "v1.0.0", --副标题
+    Title = "v1.21.11", --副标题
     Color = Color3.fromHex("#468C37"), --副标题颜色
 })
 Window:Tag({
@@ -53,15 +53,15 @@ Window:Tag({
     Color = Color3.fromHex("#FF5809"), --副标题颜色
 })
 Window:Tag({
-    Title = "纯缝合", --副标题
+    Title = "纯缝合禁止倒卖<<<", --副标题
     Color = Color3.fromHex("#ABB78C"), --副标题颜色
 })
 local homeTab = Window:Tab({ --创建选择栏
     Title = "通知", --文本
-    Icon = "home", --图标
+    Icon = "rbxassetid://78974218545947", --图标
 })
 homeTab:Paragraph({ --文字/图片栏
-    Image = "rbxassetid://133744850199019", --创建图标
+    Image = "rbxassetid://121682914383691", --创建图标
     Title = "月薪脚本", --副标题
     ImageSize = 68, --图片大小
     Desc = "史上缝合最多的脚本", --文本
@@ -137,10 +137,44 @@ homeTab:Button({ --按钮
     end,
     Title = "Sapphire"
 })
+local homeTab = Window:Tab({ --创建选择栏
+    Title = "被遗弃大部分都被和谐了", --文本
+    Icon = "rbxassetid://78974218545947",
+})
+homeTab:Button({ --按钮
+    Callback =  --触发
+    function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/GBmWn4eZ", true))()
+    end,
+    Title = "被遗器加速动作"
+})
+local homeTab = Window:Tab({ --创建选择栏
+    Title = "各大脚本中心", --文本
+    Icon = "rbxassetid://78974218545947",
+})
+
+homeTab:Button({ --按钮
+    Callback =  --触发
+    function()
+    loadstring(game:HttpGet("https://gitee.com/BS_script/script/raw/master/BS_Script.Luau"))()
+    end,
+    Title = "黑洞脚本中心"
+})
+homeTab:Button({ --按钮
+    Callback =  --触发
+    function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/NOODLES65977/LS_Hub/refs/heads/main/LS_Hubbro/BY%3BTY/AXIN/LS.lua"))()
+    end,
+    Title = "ls_中心"
+})
+local homeTab = Window:Tab({ --创建选择栏
+    Title = "通用", --文本
+    Icon = "rbxassetid://78974218545947",
+})
 
 local homeTab = Window:Tab({ --创建选择栏
-    Title = "ui设置", --文本
-    Icon = "rbxassetid://78974218545947", --图标
+    Title = "UI颜色设置", --文本
+    Icon = "rbxassetid://78974218545947", 
 })
     
 homeTab:Dropdown({
@@ -148,6 +182,6 @@ homeTab:Dropdown({
     Callback = function(value)
         Loaded_Main_Lua:SetTheme(value)
     end,
-    Title = "选择主题",
-    Values = {"Dark", "Light", "Rose", "Plant", "Red", "Indigo", "Sky", "Violet", "Amber", "Emerald", "Midnight", "Crimson", "MonokaiPro", "CottonCandy", "Rainbow"},
+    Title = "选择自己喜欢的颜色",
+    Values = {"Dark", "Light", "Rose", "Plant", "Red", "Indigo", "Sky", "Violet", "Amber","Emerald", "Midnight", "Crimson", "MonokaiPro", "CottonCandy", "Rainbow"},
 })

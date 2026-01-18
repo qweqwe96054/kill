@@ -1,4 +1,4 @@
-local Main_Lua = game:HttpGet("https://github.com/Footagesus/WindUI/releases/latest/download/main.lua")
+local Main_Lua = game:HttpGet("https://pastefy.app/CXHcGOsE/raw")
 local Loaded_Main_Lua = loadstring(Main_Lua)()
 local Window = Loaded_Main_Lua:CreateWindow({
     User = {
@@ -13,12 +13,25 @@ local Window = Loaded_Main_Lua:CreateWindow({
     ScrollBarEnabled = true,
     Folder = "缝合",
     HideSearchBar = false,
+    Background = "rbxassetid://78974218545947",
     Title = "月薪脚本",
     Transparent = true,
     SideBarWidth = 200,
-    Theme = "Light",
+    Theme = "Dark",
     Icon = "monitor",
     Size = UDim2.fromOffset(300, 270),
+      KeySystem = { -- 密钥系统（注释）
+      Title = "你已进入月薪脚本卡密系统",
+       Note = "请加QQ群获得卡密",
+        KeyValidator = function(EnteredKey) -- 密钥验证函数
+         if EnteredKey == "不是，哥们，你真相信了呀" then -- 输入密钥等于1234时
+              
+              return true -- 验证通过
+          end
+            return false -- 验证失败
+            -- 简化写法：return EnteredKey == "1234"
+        end
+    }
 })
 
 
@@ -27,7 +40,7 @@ Window:EditOpenButton({
     Title = "月薪脚本", 
     Color = ColorSequence.new(Color3.fromHex("#ffffff"), Color3.fromHex("#000000")), --颜色渐变
     Draggable = true, --是否可拖动 是
-    Icon = "monitor", --悬浮球图标
+    Icon = "rbxassetid://78974218545947", --悬浮球图标
     CornerRadius = UDim.new(1, 0), --圆角
 })
 
@@ -64,7 +77,7 @@ Buttons = {{ --按钮
 
 local homeTab = Window:Tab({ --创建选择栏
     Title = "通用", --文本
-    Icon = "geist:window", --图标
+    Icon = "rbxassetid://78974218545947", --图标
 })
 
 homeTab:Button({ --按钮
@@ -98,7 +111,7 @@ homeTab:Button({ --按钮
 })
 local homeTab = Window:Tab({ --创建选择栏
     Title = "doors", --文本
-    Icon = "geist:window", --图标
+    Icon = "rbxassetid://78974218545947", --图标
 })
 
 homeTab:Button({ --按钮
@@ -125,4 +138,16 @@ homeTab:Button({ --按钮
     Title = "Sapphire"
 })
 
-Loaded_Main_Lua:SetTheme("Dark")
+local homeTab = Window:Tab({ --创建选择栏
+    Title = "ui设置", --文本
+    Icon = "rbxassetid://78974218545947", --图标
+})
+    
+homeTab:Dropdown({
+    Value = "Dark",
+    Callback = function(value)
+        Loaded_Main_Lua:SetTheme(value)
+    end,
+    Title = "选择主题",
+    Values = {"Dark", "Light", "Rose", "Plant", "Red", "Indigo", "Sky", "Violet", "Amber", "Emerald", "Midnight", "Crimson", "MonokaiPro", "CottonCandy", "Rainbow"},
+})
